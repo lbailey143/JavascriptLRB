@@ -1,0 +1,129 @@
+var sum
+var result
+
+function addNumbers (x,y) {
+sum = x+y;
+  console.info(sum);
+  return sum;
+}
+
+function multiplyNumbers(z){
+result = sum*z;
+console.info(result);
+  return result;
+}
+
+
+addNumbers(1,-20);
+
+
+multiplyNumbers(5);
+console.warn (sum);
+console.warn (result);
+
+var mVal = [4,6,"hello",true];
+
+console.log(mVal[1]);
+console.log(mVal[0]*mVal[1]);
+console.log(mVal[2]);
+
+console.log(mVal.length);
+
+var links = document.getElementsByTagName("a");
+console.log (links[0]);
+console.log(links.length);
+
+function sR(x) {
+
+var sR = Math.sqrt(x);
+
+  console.log("The square root is ",sR);}
+
+sR(36);
+console.log("done");
+
+var date1 =  new Date(1996,3,19);
+var today = new Date
+
+if (today - (date1.getTime()) >= 662256000000)
+{
+console.log("You are over 21.");
+}
+else {console.log("Sorry, you are too young.");}
+
+var pup1 = {name: "Mulder", age: 13, gender: "male"};
+
+var pup2 = {name: "Roswell", age: 10, gender: "male"};
+
+var pup3 = {name: "Crissy", age: 8, gender: "female"};
+
+
+console.log(pup1.name,", age",pup1.age,", ",pup1.gender);
+
+console.log(pup2.name,", age",pup2.age,", ",pup2.gender);
+
+console.log(pup3.name,", age",pup3.age,", ",pup3.gender);
+
+var pup1 = {name: "Mulder", age: 13, gender: "male"};
+
+var pup2 = {name: "Roswell", age: 10, gender: "male"};
+
+var pup3 = {name: "Crissy", age: 8, gender: "female"};
+
+function pupDetails() {
+console.log(this.name + " is " + this.age + " years old, and is " + this.gender + ".");
+  
+}
+
+pup1.logDetails = pupDetails;
+pup2.logDetails = pupDetails;
+pup3.logDetails = pupDetails;
+
+pup1.logDetails();
+pup2.logDetails();
+pup3.logDetails();
+
+console.log("They are really cute!");
+
+var myUl = document.getElementById("nobullet");
+console.log(myUl);
+var myLi = myUl.getElementsByTagName("li");
+console.log(myLi.length);
+var myNewLi = document.createElement("li");
+myUl = myUl.appendChild(myNewLi);
+var myText = document.createTextNode("Testing");
+myUl = myUl.appendChild(myText);
+
+
+
+function nextWeek(){
+
+var time = new Date().getTime();
+
+var time = time + (1000*60*60*24*7);
+
+var nextweek = new Date(time);
+
+document.write("One week from today is: ",nextweek,"<br>");                  
+       }
+  
+nextWeek();
+
+
+*****************************
+//This function calculates the date any specified number of week from today.
+
+function xWeeksFromToday(x){
+
+	var time = new Date().getTime();
+
+	var time = time + (1000*60*60*24*7*x);
+
+	var newdate = new Date(time);
+
+	document.write(x," weeks from today is:<br>",newdate,"<br><br>");                  
+       }
+ 
+//Call the function with prompt for user input.  
+xWeeksFromToday(prompt("Number of weeks from today (1, 2, 3, etc.)?"));
+*******************************************************************

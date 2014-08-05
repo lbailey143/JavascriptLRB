@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Calculate Date x Number of Weeks in Future/Past</title>
+
+</head>
+
+<body>
+<div style="text-align:center">
+<h1 style = "color:blue;">Calculate Date - x weeks from/ago today</h1>
+
+<h3><a href = "CalculateWeeksFromToday.html"><strong>CLICK to RUN AGAIN!</strong></a></h3>
+
+<h3>Calculate x weeks from today. For weeks "ago" enter negative numbers.</h3>
+
+<button type="button" id = "go">Begin</button><br>
+
+
+<script style="text=size:200%">
+//This function calculates the date any specified number of week from today.
+
+function xWeeksFromToday(x){
+
+	var time = new Date().getTime();
+
+	var time = time + (1000*60*60*24*7*x);
+
+	var newdate = new Date(time);
+
+	document.write('<h2 style="color:red"><strong>',x,' week(s) from/ago today is/was:<br>',newdate,'</strong></h2><br><br>');                  
+       }
+    var go getElementById("go");
+    go.onclick(xWeeksFromToday(prompt("Number of week(s) from/ago today (1, 2, 3, etc.)?  Use -1, -2, -3, etc. for 'weeks ago'"));)
+ 
+//Call the function with prompt for user input.  
+//xWeeksFromToday(prompt("Number of week(s) from/ago today (1, 2, 3, etc.)?  Use -1, -2, -3, etc. for 'weeks ago'"));
+</script>
+
+</div>
+</body>
+</html>

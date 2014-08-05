@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>How old are you?</title>
+
+</head>
+
+<body>
+<div style="text-align:center">
+<h1 style = "color:blue;">How old are you?</h1>
+
+<h3><a href = "HowOld.html"><strong>CLICK to RUN AGAIN!</strong></a></h3>
+
+
+<script>
+function yourAge(){
+var m = prompt("Enter birth month as number 1 - 12");
+m = m - 1;
+var d = prompt("Enter day of birth as number 1 - 31");
+var y = prompt("Enter four digit year of birth");
+var bd = new Date(y,m,d);
+var today = new Date();
+var diff = today - bd;
+var age = diff/(1000*60*60*24*365);
+var yourAge = Math.round(age);	
+document.write('<h2 style="color:green"><strong>Your age (rounded to nearest year) is ',yourAge,' years old.</strong></h2>')
+}
+yourAge();
+</script>
+
+</div>
+</body>
+</html>

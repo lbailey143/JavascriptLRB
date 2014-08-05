@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Can you buy cigarettes and liquor?</title>
+
+</head>
+
+<body>
+<div style="text-align:center">
+<h1 style = "color:blue;">Are you old enough<br>to buy cigarettes and liquor?</h1>
+
+<h3><a href = "DrinkingAge.html"><strong>CLICK to RUN AGAIN!</strong></a></h3>
+
+
+<script>
+function yourAge(){
+var m = prompt("Enter birth month as number 1 - 12");
+m = m - 1;
+var d = prompt("Enter day of birth as number 1 - 31");
+var y = prompt("Enter four digit year of birth");
+var bd = new Date(y,m,d);
+var today = new Date();
+var diff = today - bd;
+
+if (diff >= 819936000000)
+{
+document.write('<h2 style="color:green"><strong><span style="font-size:200%">Congratulations!</span><br>You are over 21!<br>But don\'t smoke!<br>Just drink (not too much)!</strong></h2>');
+}
+else {document.write('<h2 style="color:red"><strong>Sorry, you are<br><span style="font-size:200%">TOO YOUNG!</span><br>Have a gingerale and a candy bar!<br>And, don\'t EVER smoke!</strong></h2>');}
+}
+yourAge();
+</script>
+
+</div>
+</body>
+</html>
